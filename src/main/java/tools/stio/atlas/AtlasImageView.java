@@ -610,11 +610,7 @@ public class AtlasImageView extends View {
         if (drawable != null) {
             this.drawable.setCallback(this);
         }
-        if (drawable instanceof GIFDrawable) {
-            setLayerType(LAYER_TYPE_SOFTWARE, null);
-        } else {
-            setLayerType(defaultLayerType, null);
-        }
+        setLayerType(defaultLayerType, null);
         setContentWorkDimensions();
         invalidate();
     }
